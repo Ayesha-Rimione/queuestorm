@@ -27,13 +27,3 @@ async def analyze(request: Request):
         return JSONResponse(status_code=200, content=result)
     except Exception as e:
         return JSONResponse(status_code=500, content={"error": "Internal server error"})
-
-    @app.get("/")
-def root():
-    return {
-        "project": "QueueStorm Investigator",
-        "status": "running",
-        "version": "1.0",
-        "docs": "/docs",
-        "health": "/health"
-    }
