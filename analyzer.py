@@ -189,6 +189,5 @@ def analyze_ticket(ticket: dict) -> dict:
 
     result["evidence_verdict"] = determine_evidence_verdict(ticket, result)
     result = apply_safety_rules(result)
-    result = apply_safety_rules(result)
 
     return result

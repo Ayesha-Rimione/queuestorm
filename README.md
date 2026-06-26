@@ -40,7 +40,7 @@ POST /analyze-ticket  → structured JSON analysis
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOURNAME/queuestorm.git
+git clone https://github.com/Ayesha-Rimione/queuestorm.git
 cd queuestorm
 ```
 
@@ -127,6 +127,22 @@ curl -X POST https://queuestorm-dkli.onrender.com/analyze-ticket \
 - Free tier sufficient for evaluation volume
 - No GPU required, no large local model weights
 
+
+**Architectural Diagaram**
+Complaint
+      │
+      ▼
+ FastAPI
+      │
+      ├────────► Rule Engine
+      │
+      └────────► Groq LLM
+                   │
+             Structured Output
+                   │
+           Safety Validation
+                   │
+             Final JSON
 **Approach — Hybrid Rule + AI:**
 
 The system uses a two-layer architecture:
